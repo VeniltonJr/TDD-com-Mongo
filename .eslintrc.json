@@ -1,0 +1,7 @@
+{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "tsconfigRootDir": "/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/",
+    "project": "./tsconfig.json"
+  }
+}
