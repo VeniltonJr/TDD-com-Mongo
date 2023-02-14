@@ -1,3 +1,4 @@
+import { MissingParamError } from '../errors/missingParamError'
 import { SignUpController } from './signup'
 
 describe('SignUp Controller', () => {
@@ -12,7 +13,7 @@ describe('SignUp Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('faltou preencher o campo: nome'))
+    expect(httpResponse.body).toEqual(new MissingParamError('nome'))
   })
 
   test('se o email não for informado retorna 400', () => {
@@ -26,6 +27,6 @@ describe('SignUp Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('faltou preencher o campo: email'))
+    expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
 })
