@@ -1,7 +1,8 @@
-export default {
+const config = {
   collectCoverage: true,
-  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
+  //collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
   coverageDirectory: "coverage",
+  coverageProvider: 'babel',
   // preset: undefined,
   // rootDir: undefined,
   roots: ["<rootDir>/src/"],
@@ -9,4 +10,6 @@ export default {
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
-};
+}
+
+module.exports = config
