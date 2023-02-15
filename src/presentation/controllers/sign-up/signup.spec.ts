@@ -43,7 +43,7 @@ const makeSut = (): SutTypes => {
 }
 
 describe('SignUp Controller', () => {
-  test('se o nome não for informado retorna 400', () => {
+  test('deve retornar 400 se o nome não for informado', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -57,7 +57,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('name'))
   })
 
-  test('se o email não for informado retorna 400', () => {
+  test('deve retornar 400 se o email não for informado', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -71,7 +71,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
 
-  test('se o password não for informado retorna 400', () => {
+  test('deve retornar 400 se a senha não for informada', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -85,7 +85,21 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
 
-  test('se o passwordConfirmation informado for invalido retorna 400', () => {
+  test('deve retornar 400 se o password confirmation não for informado', () => {
+    const { sut } = makeSut()
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'any_email@mail.com',
+        password: 'any_password'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
+  })
+
+  test('deve retornar 400 se o passwordConfirmation informado for invalido', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -100,21 +114,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new InvalidParamError('passwordConfirmation'))
   })
 
-  test('se o passwordConfirmation não for informado retorna 400', () => {
-    const { sut } = makeSut()
-    const httpRequest = {
-      body: {
-        name: 'any_name',
-        email: 'any_email@mail.com',
-        password: 'any_password'
-      }
-    }
-    const httpResponse = sut.handle(httpRequest)
-    expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
-  })
-
-  test('se o email informado for invalido retorna 400', () => {
+  test('deve retornar 400 se o email informado for invalido', () => {
     const { sut, emailValidatorStub } = makeSut()
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
     const httpRequest = {
@@ -145,7 +145,7 @@ describe('SignUp Controller', () => {
     expect(isValidSpy).toHaveBeenCalledWith('any_email@mail.com')
   })
 
-  test('se o AddAccount retornar uma execao retorna 500', () => {
+  test('deve retornar 500 se o AddAccount retornar uma execao', () => {
     const { sut, addAccountStub } = makeSut()
     jest.spyOn(addAccountStub, 'add').mockImplementationOnce(() => {
       throw new Error()
@@ -183,7 +183,7 @@ describe('SignUp Controller', () => {
   })
 })
 
-test('se o EmailValidator retornar uma execao retorna 500', () => {
+test('deve retornar 500 se o EmailValidator retornar uma execao', () => {
   const { sut, emailValidatorStub } = makeSut()
   jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
     throw new Error()
@@ -199,4 +199,24 @@ test('se o EmailValidator retornar uma execao retorna 500', () => {
   const httpResponse = sut.handle(httpRequest)
   expect(httpResponse.statusCode).toBe(500)
   expect(httpResponse.body).toEqual(new ServerError())
+})
+
+test('deve retornar 200 se as informações forem validas', () => {
+  const { sut } = makeSut()
+  const httpRequest = {
+    body: {
+      name: 'valid_name',
+      email: 'valid_email@mail.com',
+      password: 'valid_password',
+      passwordConfirmation: 'valid_password'
+    }
+  }
+  const httpResponse = sut.handle(httpRequest)
+  expect(httpResponse.statusCode).toBe(200)
+  expect(httpResponse.body).toEqual({
+    id: 'valid_id',
+    name: 'valid_name',
+    email: 'valid_email@mail.com',
+    password: 'valid_password'
+  })
 })
