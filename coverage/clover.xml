@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676553258047" clover="3.2.0">
-  <project timestamp="1676553258047" name="All files">
-    <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="13" coveredelements="9" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
-    <file name="db-add-account-protocols.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/data/usercases/add-account/db-add-account-protocols.ts">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="1" count="0" type="stmt"/>
-      <line num="2" count="0" type="stmt"/>
-      <line num="3" count="0" type="stmt"/>
-      <line num="4" count="0" type="stmt"/>
-    </file>
+<coverage generated="1676553346037" clover="3.2.0">
+  <project timestamp="1676553346037" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="9" coveredelements="9" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
     <file name="db-add-account.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/data/usercases/add-account/db-add-account.ts">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="8" count="3" type="stmt"/>
-      <line num="9" count="3" type="stmt"/>
-      <line num="13" count="3" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
       <line num="15" count="2" type="stmt"/>
     </file>
   </project>
