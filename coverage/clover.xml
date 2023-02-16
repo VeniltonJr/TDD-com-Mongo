@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676570019534" clover="3.2.0">
-  <project timestamp="1676570019534" name="All files">
-    <metrics statements="71" coveredstatements="12" conditionals="3" coveredconditionals="0" methods="17" coveredmethods="4" elements="91" coveredelements="16" complexity="0" loc="71" ncloc="71" packages="9" files="14" classes="14"/>
-    <package name="data.usercases.add-account">
-      <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="db-add-account-protocols.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/data/usercases/add-account/db-add-account-protocols.ts">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-      <file name="db-add-account.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/data/usercases/add-account/db-add-account.ts">
-        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="infra.criptography">
-      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="bcrypt-adapter.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/infra/criptography/bcrypt-adapter.ts">
-        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="infra.db.mongodb.account-repository">
+<coverage generated="1676570254394" clover="3.2.0">
+  <project timestamp="1676570254394" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="16" coveredelements="16" complexity="0" loc="12" ncloc="12" packages="2" files="2" classes="2"/>
+    <package name="account-repository">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="account.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/infra/db/mongodb/account-repository/account.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -45,7 +15,7 @@
         <line num="16" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="infra.db.mongodb.helpers">
+    <package name="helpers">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="mongo-helper.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/infra/db/mongodb/helpers/mongo-helper.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -54,92 +24,6 @@
         <line num="7" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="presentation.controllers.sign-up">
-      <metrics statements="23" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="signup-protocols.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/controllers/sign-up/signup-protocols.ts">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-      <file name="signup.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/controllers/sign-up/signup.ts">
-        <metrics statements="19" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="presentation.errors">
-      <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="index.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/errors/index.ts">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-      </file>
-      <file name="invalidParamError.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/errors/invalidParamError.ts">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-      <file name="missingParamError.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/errors/missingParamError.ts">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-      <file name="serverError.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/errors/serverError.ts">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="presentation.helpers">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="http-helper.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/helpers/http-helper.ts">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="presentation.protocols">
-      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/presentation/protocols/index.ts">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="utils">
-      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="email-validatorAdapter.ts" path="/home/user/Documentos/Projetos/JavaScript/AulasUdemy/AgoraVai/src/utils/email-validatorAdapter.ts">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
       </file>
     </package>
   </project>
