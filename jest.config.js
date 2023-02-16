@@ -1,9 +1,9 @@
 const config = {
   collectCoverage: true,
-  //collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
   coverageDirectory: "coverage",
   coverageProvider: 'babel',
-  // preset: undefined,
+  preset: '@shelf/jest-mongodb',
   // rootDir: undefined,
   roots: ["<rootDir>/src/"],
   testEnvironment: "node",
