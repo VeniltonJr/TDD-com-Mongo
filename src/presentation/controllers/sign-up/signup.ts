@@ -5,6 +5,7 @@ import { badRequest, serverError, ok } from '../../helpers/http-helper'
 export class SignUpController implements Controller {
   private readonly emailValidator: EmailValidator
   private readonly addAccount: AddAccount
+
   constructor (emailValidator: EmailValidator, addAccount: AddAccount) {
     this.emailValidator = emailValidator
     this.addAccount = addAccount
@@ -26,14 +27,14 @@ export class SignUpController implements Controller {
       if (!isValid) {
         return badRequest(new InvalidParamError('email'))
       }
-      const accont = await this.addAccount.add({
+      const account = await this.addAccount.add({
         name,
         email,
         password
       })
-      return ok(accont)
+      return ok(account)
     } catch (error) {
-      return serverError()
+      return serverError(error)
     }
   }
 }
